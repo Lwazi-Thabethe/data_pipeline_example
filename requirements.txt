@@ -1,3 +1,6 @@
 requests
 kafka-python
 python-dotenv
+gunicorn
+Flask
+
