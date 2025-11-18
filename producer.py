@@ -15,7 +15,7 @@ producer = KafkaProducer(
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
-KAFKA_TOPIC = os.environ.get('KAFKA_TOPIC', 'universities')
+KAFKA_TOPIC = os.environ.get('KAFKA_TOPIC', 'example')
 
 def download_dropbox_file(path):
     """Download a file from Dropbox"""
