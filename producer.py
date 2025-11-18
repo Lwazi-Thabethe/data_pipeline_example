@@ -15,7 +15,7 @@ producer = KafkaProducer(
 )
 
 DROPBOX_TOKEN = os.environ['DROPBOX_TOKEN']
-KAFKA_TOPIC = os.environ.get('KAFKA_TOPIC', 'universities')
+KAFKA_TOPIC = os.environ.get('KAFKA_TOPIC', 'example')
 
 def download_dropbox_file(path):
     headers = {
@@ -30,7 +30,7 @@ def download_dropbox_file(path):
 def handle_update():
     data = request.json
     # extract changed file path from webhook payload
-    file_path = data.get("path_display") or "/university_files/test_university.csv"
+    file_path = data.get("path_display") 
 
     csv_text = download_dropbox_file(file_path)
     lines = csv_text.strip().splitlines()
