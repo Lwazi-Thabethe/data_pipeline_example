@@ -1,6 +1,10 @@
 import os, json, requests
 from kafka import KafkaProducer
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 # Env variables
 DROPBOX_TOKEN = os.environ['DROPBOX_TOKEN']
 KAFKA_BOOTSTRAP = os.environ['KAFKA_BOOTSTRAP']

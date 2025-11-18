@@ -3,4 +3,5 @@ kafka-python
 python-dotenv
 gunicorn
 Flask
-
+dropbox
+firebase-admin

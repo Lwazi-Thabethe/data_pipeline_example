@@ -2,6 +2,9 @@ import os, json
 from kafka import KafkaConsumer
 import firebase_admin
 from firebase_admin import credentials, firestore
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # Firebase
 cred = credentials.Certificate(json.loads(os.environ['FIREBASE_KEY_JSON']))
