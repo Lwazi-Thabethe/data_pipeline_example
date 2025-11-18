@@ -1,11 +1,10 @@
-from flask import Flask, requests
+from flask import Flask, request
 import os
 import json
 import requests
 
 app = Flask(__name__)
 
-# URL of the deployed producer
 PRODUCER_ENDPOINT = os.environ['PRODUCER_ENDPOINT']
 
 @app.route("/webhook", methods=["GET"])
